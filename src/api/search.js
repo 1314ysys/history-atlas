@@ -354,7 +354,10 @@ let vocabCache = { list: [], freq: new Map(), at: 0 }
 let vocabWarned = false
 
 async function loadVocab() {
-  if (Date.now() - vocabCache.at < VOCAB_TTL_MS && vocabCache.list.length) return vocabCache
+  // 用 at > 0 判断「是否已尝试过」，而不是 list.length。
+  // 否则词表为空（表不存在 / 无数据）时，每次零命中查询都会重新查库，
+  // 实测让 searchMiss 从 1 ms 劣化到 67 ms（每请求多一次失败的 SQL 往返）。
+  if (vocabCache.at > 0 && Date.now() - vocabCache.at < VOCAB_TTL_MS) return vocabCache
   try {
     const { rows } = await searchRead(
       `SELECT term, freq FROM search_vocab WHERE freq >= 2 ORDER BY freq DESC LIMIT 40000`,
