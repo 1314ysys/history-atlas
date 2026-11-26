@@ -1,6 +1,6 @@
 {
   "name": "history-atlas",
-  "version": "3.0.6",
+  "version": "3.1.0",
   "private": true,
   "type": "module",
   "description": "History Atlas - chronological event knowledge system v1",
@@ -26,6 +26,7 @@
     "db:fts": "node scripts/backfill-fts.js",
     "db:index": "node scripts/add-covering-index.js",
     "db:drop-idx": "node scripts/drop-redundant-index.js",
+    "copy:import": "node scripts/copy-import.js",
     "db:spell": "node scripts/apply-spell.js",
     "replica:init": "node scripts/pg-replica.js init",
     "replica:start": "node scripts/pg-replica.js start",
@@ -44,6 +45,7 @@
     "@electric-sql/pglite": "^0.5.17",
     "@embedded-postgres/windows-x64": "^19.0.0-beta.20",
     "maplibre-gl": "^4.7.1",
-    "pg": "^8.23.1"
+    "pg": "^8.23.1",
+    "pg-copy-streams": "^7.0.0"
   }
 }
