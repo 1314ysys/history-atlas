@@ -46,13 +46,21 @@
 ## 快速开始
 
 ```bash
-npm install                 # 依赖（postinstall 会自动复制前端库到 web/vendor）
+npm install                 # 依赖（postinstall 自动复制前端库到 web/vendor）
 npm run pg:init             # 初始化原生 PostgreSQL（首次）
 npm run pg:start            # 启动数据库（5433）
 npm run db:create           # 建库 history_atlas
 npm run seed                # 灌入 728 条种子事件
+npm run db:fts              # 回填 search_tsv + 建 GIN 全文索引
+npm run db:index            # 加时间轴覆盖索引
+npm run db:spell            # 构建拼写词表（22,041 词）
+npm run export              # 导出静态分片（浏览走 CDN，不查库）
 npm start                   # http://127.0.0.1:5173（cluster 4 worker + 缓存）
 ```
+
+> **后四步（db:fts / db:index / db:spell / export）不能省略**：
+> 缺 `db:fts` 检索会退化为 LIKE 全表扫；缺 `db:spell` 拼写建议为空；
+> 缺 `export` 时间轴会回退到 API 查询（仍可用，但失去「浏览零查库」）。
 
 > `web/vendor/` 已在仓库内保留一份产物（maplibre 848 KB），克隆即可运行；
 > 升级 maplibre 后用 `npm run vendor` 刷新。
