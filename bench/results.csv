@@ -1,0 +1,382 @@
+group,scope,variant,metric,value,unit,notes
+A,1000,insert,totalMs,348,ms,event+claim+source 全量插入
+A,1000,insert,rowsPerSec,12778.736,rows/s,三表合计行
+A,1000,insert,eventsPerSec,2873.563,events/s,仅 event 表
+A,1000,storage,dirBytes,42459315,bytes,PGlite 目录 du
+A,1000,storage,bytesPerEvent,42459.315,bytes/event,目录 du / 事件数
+A,1000,batch500,batch.p50,53,ms,每 500 行一批
+A,1000,batch500,batch.p95,62,ms,每 500 行一批
+A,1000,batch500,batch.p99,62.8,ms,每 500 行一批
+A,1000,batch500,batch.max,63,ms,每 500 行一批
+A,10000,insert,totalMs,3021,ms,event+claim+source 全量插入
+A,10000,insert,rowsPerSec,14855.677,rows/s,三表合计行
+A,10000,insert,eventsPerSec,3310.162,events/s,仅 event 表
+A,10000,storage,dirBytes,88050587,bytes,PGlite 目录 du
+A,10000,storage,bytesPerEvent,8805.059,bytes/event,目录 du / 事件数
+A,10000,batch500,batch.p50,44.5,ms,每 500 行一批
+A,10000,batch500,batch.p95,84.6,ms,每 500 行一批
+A,10000,batch500,batch.p99,108.92,ms,每 500 行一批
+A,10000,batch500,batch.max,115,ms,每 500 行一批
+A,100000,insert,totalMs,27111,ms,event+claim+source 全量插入
+A,100000,insert,rowsPerSec,16599.166,rows/s,三表合计行
+A,100000,insert,eventsPerSec,3688.54,events/s,仅 event 表
+A,100000,storage,dirBytes,406435796,bytes,PGlite 目录 du
+A,100000,storage,bytesPerEvent,4064.358,bytes/event,目录 du / 事件数
+A,100000,batch500,batch.p50,45,ms,每 500 行一批
+A,100000,batch500,batch.p95,54.1,ms,每 500 行一批
+A,100000,batch500,batch.p99,69.07,ms,每 500 行一批
+A,100000,batch500,batch.max,111,ms,每 500 行一批
+B,1000,10y/plain/gist,p50,0.994,ms,matches=7 n=50
+B,1000,10y/plain/gist,p95,1.671,ms,matches=7 n=50
+B,1000,10y/plain/gist,p99,2.427,ms,matches=7 n=50
+B,1000,10y/plain/gist,max,2.44,ms,matches=7 n=50
+B,1000,10y/plain/gist,mean,1.14,ms,matches=7 n=50
+B,1000,10y/filtered/gist,p50,0.778,ms,matches=1 n=50
+B,1000,10y/filtered/gist,p95,1.139,ms,matches=1 n=50
+B,1000,10y/filtered/gist,p99,1.353,ms,matches=1 n=50
+B,1000,10y/filtered/gist,max,1.407,ms,matches=1 n=50
+B,1000,10y/filtered/gist,mean,0.84,ms,matches=1 n=50
+B,1000,100y/plain/gist,p50,1.468,ms,matches=35 n=50
+B,1000,100y/plain/gist,p95,1.808,ms,matches=35 n=50
+B,1000,100y/plain/gist,p99,2.155,ms,matches=35 n=50
+B,1000,100y/plain/gist,max,2.362,ms,matches=35 n=50
+B,1000,100y/plain/gist,mean,1.523,ms,matches=35 n=50
+B,1000,100y/filtered/gist,p50,0.881,ms,matches=5 n=50
+B,1000,100y/filtered/gist,p95,1.487,ms,matches=5 n=50
+B,1000,100y/filtered/gist,p99,1.503,ms,matches=5 n=50
+B,1000,100y/filtered/gist,max,1.507,ms,matches=5 n=50
+B,1000,100y/filtered/gist,mean,0.955,ms,matches=5 n=50
+B,1000,1000y/plain/gist,p50,8.256,ms,matches=376 n=50
+B,1000,1000y/plain/gist,p95,9.216,ms,matches=376 n=50
+B,1000,1000y/plain/gist,p99,9.565,ms,matches=376 n=50
+B,1000,1000y/plain/gist,max,9.729,ms,matches=376 n=50
+B,1000,1000y/plain/gist,mean,8.392,ms,matches=376 n=50
+B,1000,1000y/filtered/gist,p50,1.317,ms,matches=24 n=50
+B,1000,1000y/filtered/gist,p95,1.52,ms,matches=24 n=50
+B,1000,1000y/filtered/gist,p99,1.558,ms,matches=24 n=50
+B,1000,1000y/filtered/gist,max,1.583,ms,matches=24 n=50
+B,1000,1000y/filtered/gist,mean,1.349,ms,matches=24 n=50
+B,1000,full/plain/gist,p50,19.873,ms,matches=999 n=50
+B,1000,full/plain/gist,p95,21.247,ms,matches=999 n=50
+B,1000,full/plain/gist,p99,23.104,ms,matches=999 n=50
+B,1000,full/plain/gist,max,24.015,ms,matches=999 n=50
+B,1000,full/plain/gist,mean,20.085,ms,matches=999 n=50
+B,1000,full/filtered/gist,p50,2.567,ms,matches=69 n=50
+B,1000,full/filtered/gist,p95,2.985,ms,matches=69 n=50
+B,1000,full/filtered/gist,p99,3.395,ms,matches=69 n=50
+B,1000,full/filtered/gist,max,3.42,ms,matches=69 n=50
+B,1000,full/filtered/gist,mean,2.63,ms,matches=69 n=50
+B,1000,10y/plain/nogist,p50,0.984,ms,matches=7 n=50
+B,1000,10y/plain/nogist,p95,1.068,ms,matches=7 n=50
+B,1000,10y/plain/nogist,p99,1.258,ms,matches=7 n=50
+B,1000,10y/plain/nogist,max,1.354,ms,matches=7 n=50
+B,1000,10y/plain/nogist,mean,1.004,ms,matches=7 n=50
+B,1000,10y/filtered/nogist,p50,0.804,ms,matches=1 n=50
+B,1000,10y/filtered/nogist,p95,0.937,ms,matches=1 n=50
+B,1000,10y/filtered/nogist,p99,1.033,ms,matches=1 n=50
+B,1000,10y/filtered/nogist,max,1.049,ms,matches=1 n=50
+B,1000,10y/filtered/nogist,mean,0.826,ms,matches=1 n=50
+B,1000,100y/plain/nogist,p50,1.484,ms,matches=35 n=50
+B,1000,100y/plain/nogist,p95,1.751,ms,matches=35 n=50
+B,1000,100y/plain/nogist,p99,2.102,ms,matches=35 n=50
+B,1000,100y/plain/nogist,max,2.146,ms,matches=35 n=50
+B,1000,100y/plain/nogist,mean,1.54,ms,matches=35 n=50
+B,1000,100y/filtered/nogist,p50,0.899,ms,matches=5 n=50
+B,1000,100y/filtered/nogist,p95,1.272,ms,matches=5 n=50
+B,1000,100y/filtered/nogist,p99,1.391,ms,matches=5 n=50
+B,1000,100y/filtered/nogist,max,1.412,ms,matches=5 n=50
+B,1000,100y/filtered/nogist,mean,0.948,ms,matches=5 n=50
+B,1000,1000y/plain/nogist,p50,8.263,ms,matches=376 n=50
+B,1000,1000y/plain/nogist,p95,8.988,ms,matches=376 n=50
+B,1000,1000y/plain/nogist,p99,9.448,ms,matches=376 n=50
+B,1000,1000y/plain/nogist,max,9.576,ms,matches=376 n=50
+B,1000,1000y/plain/nogist,mean,8.306,ms,matches=376 n=50
+B,1000,1000y/filtered/nogist,p50,1.257,ms,matches=24 n=50
+B,1000,1000y/filtered/nogist,p95,1.487,ms,matches=24 n=50
+B,1000,1000y/filtered/nogist,p99,1.673,ms,matches=24 n=50
+B,1000,1000y/filtered/nogist,max,1.746,ms,matches=24 n=50
+B,1000,1000y/filtered/nogist,mean,1.303,ms,matches=24 n=50
+B,1000,full/plain/nogist,p50,19.426,ms,matches=999 n=50
+B,1000,full/plain/nogist,p95,21.727,ms,matches=999 n=50
+B,1000,full/plain/nogist,p99,24.197,ms,matches=999 n=50
+B,1000,full/plain/nogist,max,24.677,ms,matches=999 n=50
+B,1000,full/plain/nogist,mean,19.999,ms,matches=999 n=50
+B,1000,full/filtered/nogist,p50,2.353,ms,matches=69 n=50
+B,1000,full/filtered/nogist,p95,3.328,ms,matches=69 n=50
+B,1000,full/filtered/nogist,p99,3.436,ms,matches=69 n=50
+B,1000,full/filtered/nogist,max,3.446,ms,matches=69 n=50
+B,1000,full/filtered/nogist,mean,2.474,ms,matches=69 n=50
+B,10000,10y/plain/gist,p50,2.215,ms,matches=57 n=50
+B,10000,10y/plain/gist,p95,3.705,ms,matches=57 n=50
+B,10000,10y/plain/gist,p99,4.361,ms,matches=57 n=50
+B,10000,10y/plain/gist,max,4.421,ms,matches=57 n=50
+B,10000,10y/plain/gist,mean,2.409,ms,matches=57 n=50
+B,10000,10y/filtered/gist,p50,3.23,ms,matches=2 n=50
+B,10000,10y/filtered/gist,p95,3.965,ms,matches=2 n=50
+B,10000,10y/filtered/gist,p99,4.1,ms,matches=2 n=50
+B,10000,10y/filtered/gist,max,4.197,ms,matches=2 n=50
+B,10000,10y/filtered/gist,mean,3.221,ms,matches=2 n=50
+B,10000,100y/plain/gist,p50,8.731,ms,matches=376 n=50
+B,10000,100y/plain/gist,p95,10.145,ms,matches=376 n=50
+B,10000,100y/plain/gist,p99,10.967,ms,matches=376 n=50
+B,10000,100y/plain/gist,max,11.635,ms,matches=376 n=50
+B,10000,100y/plain/gist,mean,8.969,ms,matches=376 n=50
+B,10000,100y/filtered/gist,p50,4.077,ms,matches=20 n=50
+B,10000,100y/filtered/gist,p95,5.35,ms,matches=20 n=50
+B,10000,100y/filtered/gist,p99,5.717,ms,matches=20 n=50
+B,10000,100y/filtered/gist,max,5.782,ms,matches=20 n=50
+B,10000,100y/filtered/gist,mean,4.178,ms,matches=20 n=50
+B,10000,1000y/plain/gist,p50,71.191,ms,matches=3624 n=50
+B,10000,1000y/plain/gist,p95,79.599,ms,matches=3624 n=50
+B,10000,1000y/plain/gist,p99,82.695,ms,matches=3624 n=50
+B,10000,1000y/plain/gist,max,84.293,ms,matches=3624 n=50
+B,10000,1000y/plain/gist,mean,72.419,ms,matches=3624 n=50
+B,10000,1000y/filtered/gist,p50,8.271,ms,matches=230 n=50
+B,10000,1000y/filtered/gist,p95,10.138,ms,matches=230 n=50
+B,10000,1000y/filtered/gist,p99,10.264,ms,matches=230 n=50
+B,10000,1000y/filtered/gist,max,10.331,ms,matches=230 n=50
+B,10000,1000y/filtered/gist,mean,8.514,ms,matches=230 n=50
+B,10000,full/plain/gist,p50,104.379,ms,matches=9323 n=50
+B,10000,full/plain/gist,p95,120.068,ms,matches=9323 n=50
+B,10000,full/plain/gist,p99,130.452,ms,matches=9323 n=50
+B,10000,full/plain/gist,max,136.31,ms,matches=9323 n=50
+B,10000,full/plain/gist,mean,106.334,ms,matches=9323 n=50
+B,10000,full/filtered/gist,p50,15.225,ms,matches=618 n=50
+B,10000,full/filtered/gist,p95,18.992,ms,matches=618 n=50
+B,10000,full/filtered/gist,p99,20.717,ms,matches=618 n=50
+B,10000,full/filtered/gist,max,22.14,ms,matches=618 n=50
+B,10000,full/filtered/gist,mean,15.876,ms,matches=618 n=50
+B,10000,10y/plain/nogist,p50,5.589,ms,matches=57 n=50
+B,10000,10y/plain/nogist,p95,6.96,ms,matches=57 n=50
+B,10000,10y/plain/nogist,p99,7.708,ms,matches=57 n=50
+B,10000,10y/plain/nogist,max,7.94,ms,matches=57 n=50
+B,10000,10y/plain/nogist,mean,5.815,ms,matches=57 n=50
+B,10000,10y/filtered/nogist,p50,2.705,ms,matches=2 n=50
+B,10000,10y/filtered/nogist,p95,3.238,ms,matches=2 n=50
+B,10000,10y/filtered/nogist,p99,3.479,ms,matches=2 n=50
+B,10000,10y/filtered/nogist,max,3.618,ms,matches=2 n=50
+B,10000,10y/filtered/nogist,mean,2.777,ms,matches=2 n=50
+B,10000,100y/plain/nogist,p50,12.818,ms,matches=376 n=50
+B,10000,100y/plain/nogist,p95,15.147,ms,matches=376 n=50
+B,10000,100y/plain/nogist,p99,16.543,ms,matches=376 n=50
+B,10000,100y/plain/nogist,max,16.961,ms,matches=376 n=50
+B,10000,100y/plain/nogist,mean,12.809,ms,matches=376 n=50
+B,10000,100y/filtered/nogist,p50,3.186,ms,matches=20 n=50
+B,10000,100y/filtered/nogist,p95,3.706,ms,matches=20 n=50
+B,10000,100y/filtered/nogist,p99,3.942,ms,matches=20 n=50
+B,10000,100y/filtered/nogist,max,4.126,ms,matches=20 n=50
+B,10000,100y/filtered/nogist,mean,3.245,ms,matches=20 n=50
+B,10000,1000y/plain/nogist,p50,71.183,ms,matches=3624 n=50
+B,10000,1000y/plain/nogist,p95,77.262,ms,matches=3624 n=50
+B,10000,1000y/plain/nogist,p99,81.267,ms,matches=3624 n=50
+B,10000,1000y/plain/nogist,max,82.01,ms,matches=3624 n=50
+B,10000,1000y/plain/nogist,mean,72.464,ms,matches=3624 n=50
+B,10000,1000y/filtered/nogist,p50,7.532,ms,matches=230 n=50
+B,10000,1000y/filtered/nogist,p95,8.151,ms,matches=230 n=50
+B,10000,1000y/filtered/nogist,p99,8.394,ms,matches=230 n=50
+B,10000,1000y/filtered/nogist,max,8.457,ms,matches=230 n=50
+B,10000,1000y/filtered/nogist,mean,7.577,ms,matches=230 n=50
+B,10000,full/plain/nogist,p50,102.367,ms,matches=9323 n=50
+B,10000,full/plain/nogist,p95,116.944,ms,matches=9323 n=50
+B,10000,full/plain/nogist,p99,120.976,ms,matches=9323 n=50
+B,10000,full/plain/nogist,max,123.804,ms,matches=9323 n=50
+B,10000,full/plain/nogist,mean,104.81,ms,matches=9323 n=50
+B,10000,full/filtered/nogist,p50,14.792,ms,matches=618 n=50
+B,10000,full/filtered/nogist,p95,15.616,ms,matches=618 n=50
+B,10000,full/filtered/nogist,p99,18.945,ms,matches=618 n=50
+B,10000,full/filtered/nogist,max,22.013,ms,matches=618 n=50
+B,10000,full/filtered/nogist,mean,15.031,ms,matches=618 n=50
+B,100000,10y/plain/gist,p50,17.165,ms,matches=543 n=50
+B,100000,10y/plain/gist,p95,19.745,ms,matches=543 n=50
+B,100000,10y/plain/gist,p99,23.373,ms,matches=543 n=50
+B,100000,10y/plain/gist,max,25.505,ms,matches=543 n=50
+B,100000,10y/plain/gist,mean,17.569,ms,matches=543 n=50
+B,100000,10y/filtered/gist,p50,26.063,ms,matches=43 n=50
+B,100000,10y/filtered/gist,p95,29.993,ms,matches=43 n=50
+B,100000,10y/filtered/gist,p99,31.798,ms,matches=43 n=50
+B,100000,10y/filtered/gist,max,32.386,ms,matches=43 n=50
+B,100000,10y/filtered/gist,mean,26.611,ms,matches=43 n=50
+B,100000,100y/plain/gist,p50,84.165,ms,matches=3720 n=50
+B,100000,100y/plain/gist,p95,90.526,ms,matches=3720 n=50
+B,100000,100y/plain/gist,p99,97.56,ms,matches=3720 n=50
+B,100000,100y/plain/gist,max,101.713,ms,matches=3720 n=50
+B,100000,100y/plain/gist,mean,84.639,ms,matches=3720 n=50
+B,100000,100y/filtered/gist,p50,29.989,ms,matches=268 n=50
+B,100000,100y/filtered/gist,p95,32.965,ms,matches=268 n=50
+B,100000,100y/filtered/gist,p99,34.883,ms,matches=268 n=50
+B,100000,100y/filtered/gist,max,36.384,ms,matches=268 n=50
+B,100000,100y/filtered/gist,mean,30.377,ms,matches=268 n=50
+B,100000,1000y/plain/gist,p50,144.372,ms,matches=35489 n=50
+B,100000,1000y/plain/gist,p95,151.486,ms,matches=35489 n=50
+B,100000,1000y/plain/gist,p99,153.851,ms,matches=35489 n=50
+B,100000,1000y/plain/gist,max,154.075,ms,matches=35489 n=50
+B,100000,1000y/plain/gist,mean,144.864,ms,matches=35489 n=50
+B,100000,1000y/filtered/gist,p50,72.932,ms,matches=2414 n=50
+B,100000,1000y/filtered/gist,p95,78.478,ms,matches=2414 n=50
+B,100000,1000y/filtered/gist,p99,80.049,ms,matches=2414 n=50
+B,100000,1000y/filtered/gist,max,80.266,ms,matches=2414 n=50
+B,100000,1000y/filtered/gist,mean,73.631,ms,matches=2414 n=50
+B,100000,full/plain/gist,p50,191.453,ms,matches=91951 n=50
+B,100000,full/plain/gist,p95,200.526,ms,matches=91951 n=50
+B,100000,full/plain/gist,p99,205.452,ms,matches=91951 n=50
+B,100000,full/plain/gist,max,209.978,ms,matches=91951 n=50
+B,100000,full/plain/gist,mean,191.8,ms,matches=91951 n=50
+B,100000,full/filtered/gist,p50,127.663,ms,matches=6141 n=50
+B,100000,full/filtered/gist,p95,139.366,ms,matches=6141 n=50
+B,100000,full/filtered/gist,p99,145.92,ms,matches=6141 n=50
+B,100000,full/filtered/gist,max,148.517,ms,matches=6141 n=50
+B,100000,full/filtered/gist,mean,128.83,ms,matches=6141 n=50
+B,100000,10y/plain/nogist,p50,47.003,ms,matches=543 n=50
+B,100000,10y/plain/nogist,p95,52.42,ms,matches=543 n=50
+B,100000,10y/plain/nogist,p99,54.478,ms,matches=543 n=50
+B,100000,10y/plain/nogist,max,54.529,ms,matches=543 n=50
+B,100000,10y/plain/nogist,mean,48.147,ms,matches=543 n=50
+B,100000,10y/filtered/nogist,p50,24.707,ms,matches=43 n=50
+B,100000,10y/filtered/nogist,p95,26.13,ms,matches=43 n=50
+B,100000,10y/filtered/nogist,p99,27.486,ms,matches=43 n=50
+B,100000,10y/filtered/nogist,max,28.606,ms,matches=43 n=50
+B,100000,10y/filtered/nogist,mean,24.938,ms,matches=43 n=50
+B,100000,100y/plain/nogist,p50,108.78,ms,matches=3720 n=50
+B,100000,100y/plain/nogist,p95,117.681,ms,matches=3720 n=50
+B,100000,100y/plain/nogist,p99,122.609,ms,matches=3720 n=50
+B,100000,100y/plain/nogist,max,125.345,ms,matches=3720 n=50
+B,100000,100y/plain/nogist,mean,110.25,ms,matches=3720 n=50
+B,100000,100y/filtered/nogist,p50,29.366,ms,matches=268 n=50
+B,100000,100y/filtered/nogist,p95,35.091,ms,matches=268 n=50
+B,100000,100y/filtered/nogist,p99,39.186,ms,matches=268 n=50
+B,100000,100y/filtered/nogist,max,39.856,ms,matches=268 n=50
+B,100000,100y/filtered/nogist,mean,30.713,ms,matches=268 n=50
+B,100000,1000y/plain/nogist,p50,164.494,ms,matches=35489 n=50
+B,100000,1000y/plain/nogist,p95,178.589,ms,matches=35489 n=50
+B,100000,1000y/plain/nogist,p99,211.208,ms,matches=35489 n=50
+B,100000,1000y/plain/nogist,max,233.319,ms,matches=35489 n=50
+B,100000,1000y/plain/nogist,mean,166.561,ms,matches=35489 n=50
+B,100000,1000y/filtered/nogist,p50,78.601,ms,matches=2414 n=50
+B,100000,1000y/filtered/nogist,p95,94.246,ms,matches=2414 n=50
+B,100000,1000y/filtered/nogist,p99,106.295,ms,matches=2414 n=50
+B,100000,1000y/filtered/nogist,max,113.125,ms,matches=2414 n=50
+B,100000,1000y/filtered/nogist,mean,79.932,ms,matches=2414 n=50
+B,100000,full/plain/nogist,p50,196.915,ms,matches=91951 n=50
+B,100000,full/plain/nogist,p95,207.897,ms,matches=91951 n=50
+B,100000,full/plain/nogist,p99,210.574,ms,matches=91951 n=50
+B,100000,full/plain/nogist,max,212.535,ms,matches=91951 n=50
+B,100000,full/plain/nogist,mean,197.531,ms,matches=91951 n=50
+B,100000,full/filtered/nogist,p50,129.294,ms,matches=6141 n=50
+B,100000,full/filtered/nogist,p95,160.412,ms,matches=6141 n=50
+B,100000,full/filtered/nogist,p99,186.277,ms,matches=6141 n=50
+B,100000,full/filtered/nogist,max,200.908,ms,matches=6141 n=50
+B,100000,full/filtered/nogist,mean,133.792,ms,matches=6141 n=50
+C,1000,hit1,p50,3.51,ms,matches=1 n=50
+C,1000,hit1,p95,4.021,ms,matches=1 n=50
+C,1000,hit1,p99,4.233,ms,matches=1 n=50
+C,1000,hit1,max,4.38,ms,matches=1 n=50
+C,1000,hit1,mean,3.606,ms,matches=1 n=50
+C,1000,hit1000,p50,3.465,ms,matches=1000 n=50
+C,1000,hit1000,p95,4.064,ms,matches=1000 n=50
+C,1000,hit1000,p99,5.807,ms,matches=1000 n=50
+C,1000,hit1000,max,6.974,ms,matches=1000 n=50
+C,1000,hit1000,mean,3.586,ms,matches=1000 n=50
+C,1000,miss,p50,3.34,ms,matches=0 n=50
+C,1000,miss,p95,3.689,ms,matches=0 n=50
+C,1000,miss,p99,3.947,ms,matches=0 n=50
+C,1000,miss,max,4.096,ms,matches=0 n=50
+C,1000,miss,mean,3.394,ms,matches=0 n=50
+C,1000,zh,p50,3.289,ms,matches=1000 n=50
+C,1000,zh,p95,3.611,ms,matches=1000 n=50
+C,1000,zh,p99,3.844,ms,matches=1000 n=50
+C,1000,zh,max,3.922,ms,matches=1000 n=50
+C,1000,zh,mean,3.33,ms,matches=1000 n=50
+C,10000,hit1,p50,25.141,ms,matches=1 n=50
+C,10000,hit1,p95,29.366,ms,matches=1 n=50
+C,10000,hit1,p99,31.871,ms,matches=1 n=50
+C,10000,hit1,max,32.76,ms,matches=1 n=50
+C,10000,hit1,mean,25.877,ms,matches=1 n=50
+C,10000,hit1000,p50,25.694,ms,matches=1000 n=50
+C,10000,hit1000,p95,33.192,ms,matches=1000 n=50
+C,10000,hit1000,p99,36.955,ms,matches=1000 n=50
+C,10000,hit1000,max,38.014,ms,matches=1000 n=50
+C,10000,hit1000,mean,27.002,ms,matches=1000 n=50
+C,10000,miss,p50,24.956,ms,matches=0 n=50
+C,10000,miss,p95,28.599,ms,matches=0 n=50
+C,10000,miss,p99,29.182,ms,matches=0 n=50
+C,10000,miss,max,29.481,ms,matches=0 n=50
+C,10000,miss,mean,25.829,ms,matches=0 n=50
+C,10000,zh,p50,27.252,ms,matches=1000 n=50
+C,10000,zh,p95,29.243,ms,matches=1000 n=50
+C,10000,zh,p99,32.175,ms,matches=1000 n=50
+C,10000,zh,max,34.518,ms,matches=1000 n=50
+C,10000,zh,mean,27.628,ms,matches=1000 n=50
+C,100000,hit1,p50,243.413,ms,matches=1 n=49
+C,100000,hit1,p95,266.398,ms,matches=1 n=49
+C,100000,hit1,p99,288.686,ms,matches=1 n=49
+C,100000,hit1,max,292.754,ms,matches=1 n=49
+C,100000,hit1,mean,246.029,ms,matches=1 n=49
+C,100000,hit1000,p50,236.765,ms,matches=1000 n=50
+C,100000,hit1000,p95,254.825,ms,matches=1000 n=50
+C,100000,hit1000,p99,258.984,ms,matches=1000 n=50
+C,100000,hit1000,max,260.276,ms,matches=1000 n=50
+C,100000,hit1000,mean,237.921,ms,matches=1000 n=50
+C,100000,miss,p50,235.948,ms,matches=0 n=34
+C,100000,miss,p95,250.147,ms,matches=0 n=34
+C,100000,miss,p99,253.733,ms,matches=0 n=34
+C,100000,miss,max,255.009,ms,matches=0 n=34
+C,100000,miss,mean,237.863,ms,matches=0 n=34
+C,100000,zh,p50,257.643,ms,matches=1000 n=47
+C,100000,zh,p95,266.185,ms,matches=1000 n=47
+C,100000,zh,p99,274.227,ms,matches=1000 n=47
+C,100000,zh,max,278.983,ms,matches=1000 n=47
+C,100000,zh,mean,258.168,ms,matches=1000 n=47
+D,10000,bfs2,p50,39.564,ms,persons=2000
+D,10000,bfs2,p95,53.594,ms,persons=2000
+D,10000,bfs2,p99,67.202,ms,persons=2000
+D,10000,bfs2,max,71.569,ms,persons=2000
+D,10000,bfs2,mean,41.686,ms,persons=2000
+D,10000,insert,relationInsertMs,447,ms,10000 行
+D,100000,bfs2,p50,71.122,ms,persons=20000
+D,100000,bfs2,p95,79.617,ms,persons=20000
+D,100000,bfs2,p99,85.825,ms,persons=20000
+D,100000,bfs2,max,87.153,ms,persons=20000
+D,100000,bfs2,mean,71.798,ms,persons=20000
+D,100000,insert,relationInsertMs,4182,ms,100000 行
+D,1000000,bfs2,p50,359.678,ms,persons=200000
+D,1000000,bfs2,p95,378.047,ms,persons=200000
+D,1000000,bfs2,p99,382.812,ms,persons=200000
+D,1000000,bfs2,max,384.751,ms,persons=200000
+D,1000000,bfs2,mean,359.053,ms,persons=200000
+D,1000000,insert,relationInsertMs,44977,ms,1000000 行
+E,100000,zstd-3,ratio,8.133,x,zstd level 3（zstd 默认档）
+E,100000,zstd-3,compressMs,259.42,ms,92863100 bytes
+E,100000,zstd-3,decompressMs,184.335,ms,
+E,100000,zstd-3,compressMBps,341.382,MB/s,
+E,100000,zstd-3,decompressMBps,480.436,MB/s,
+E,100000,zstd-9,ratio,10.965,x,zstd level 9
+E,100000,zstd-9,compressMs,1748.413,ms,92863100 bytes
+E,100000,zstd-9,decompressMs,183.786,ms,
+E,100000,zstd-9,compressMBps,50.652,MB/s,
+E,100000,zstd-9,decompressMBps,481.871,MB/s,
+E,100000,brotli-5,ratio,10.645,x,brotli quality 5
+E,100000,brotli-5,compressMs,1596.075,ms,92863100 bytes
+E,100000,brotli-5,decompressMs,206.072,ms,
+E,100000,brotli-5,compressMBps,55.487,MB/s,
+E,100000,brotli-5,decompressMBps,429.758,MB/s,
+E,100000,brotli-11,ratio,14.016,x,brotli quality 11（zlib 默认档）
+E,100000,brotli-11,compressMs,193719.527,ms,92863100 bytes
+E,100000,brotli-11,decompressMs,249.191,ms,
+E,100000,brotli-11,compressMBps,0.457,MB/s,
+E,100000,brotli-11,decompressMBps,355.395,MB/s,
+E,100000,gzip-6,ratio,9.219,x,gzip level 6
+E,100000,gzip-6,compressMs,1070.356,ms,92863100 bytes
+E,100000,gzip-6,decompressMs,214.708,ms,
+E,100000,gzip-6,compressMBps,82.74,MB/s,
+E,100000,gzip-6,decompressMBps,412.473,MB/s,
+E,10000,store.putText,totalMs,24699,ms,404.875 files/s
+E,10000,store.verify,totalMs,3454,ms,2895.194 files/s ok=10000
+F,1000,gist,spanIndexBytes,49152,bytes,event_span_idx 大小
+F,1000,gist,eventIndexBytes,311296,bytes,event 全部索引
+F,1000,nogist,eventIndexBytes,262144,bytes,DROP event_span_idx 后
+F,10000,gist,spanIndexBytes,573440,bytes,event_span_idx 大小
+F,10000,gist,eventIndexBytes,2048000,bytes,event 全部索引
+F,10000,nogist,eventIndexBytes,1474560,bytes,DROP event_span_idx 后
+F,100000,gist,spanIndexBytes,5734400,bytes,event_span_idx 大小
+F,100000,gist,eventIndexBytes,17391616,bytes,event 全部索引
+F,100000,nogist,eventIndexBytes,11657216,bytes,DROP event_span_idx 后

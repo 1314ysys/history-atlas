@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>History Atlas · 历史事件编年</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='13' fill='none' stroke='%23d4a24a' stroke-width='2.5'/%3E%3Cpath d='M16 8v9l6 3' fill='none' stroke='%23e6e9ef' stroke-width='2.5' stroke-linecap='round'/%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="/vendor/maplibre-gl.css" />
+  <link rel="stylesheet" href="/app.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark">◷</span>
+      <span class="brand-name" data-i18n="app.title">History Atlas</span>
+      <span class="brand-sub" data-i18n="app.subtitle">编年 · 对照 · 溯源</span>
+    </div>
+
+    <div class="search-wrap">
+      <input id="search" type="search" data-i18n-ph="search.placeholder" autocomplete="off" />
+      <div id="search-results" class="search-results" hidden></div>
+    </div>
+
+    <div id="stats" class="stats"></div>
+
+    <div class="tools">
+      <span id="build" class="build" title="build"></span>
+      <button id="btn-theme" class="btn" title="theme">☾</button>
+      <button id="btn-lang" class="btn" title="language">EN</button>
+    </div>
+  </header>
+
+  <nav class="tabs" id="tabs">
+    <button class="tab active" data-view="timeline" data-i18n="nav.timeline">时间轴</button>
+    <button class="tab" data-view="map" data-i18n="nav.map">地图</button>
+    <button class="tab" data-view="graph" data-i18n="nav.graph">人物关系</button>
+  </nav>
+
+  <main id="view" class="view"></main>
+
+  <!-- 悬浮筛选面板（仅时间轴视图显示），位置与外观在 app.css 的 .panel 里 -->
+  <aside id="panel" class="panel" hidden>
+    <div class="panel-head">
+      <span class="panel-title" data-i18n="panel.title">筛选</span>
+      <button id="panel-toggle" class="panel-toggle" title="collapse">−</button>
+    </div>
+    <div class="panel-body">
+      <div class="panel-row">
+        <div class="panel-label">
+          <span data-i18n="panel.range">时间范围</span>
+          <b id="range-label"></b>
+        </div>
+        <div class="panel-inputs">
+          <input id="range-from" type="number" step="50" />
+          <input id="range-to" type="number" step="50" />
+        </div>
+      </div>
+
+      <div class="panel-row">
+        <div class="panel-label"><span data-i18n="panel.tracks">显示轨道</span></div>
+        <div class="chips">
+          <button class="chip cn on" data-track="cn"><span data-i18n="panel.china">中国</span></button>
+          <button class="chip world on" data-track="world"><span data-i18n="panel.world">世界</span></button>
+        </div>
+      </div>
+
+      <div class="panel-row">
+        <div class="panel-label"><span data-i18n="panel.categories">类别</span></div>
+        <div class="chips" id="cat-chips"></div>
+      </div>
+
+      <div class="panel-foot">
+        <button class="btn" id="panel-reset" data-i18n="panel.reset">重置</button>
+      </div>
+
+      <div class="panel-label" style="margin-top:10px">
+        <span data-i18n="panel.count">当前视图</span>
+        <b id="view-count">0</b>
+      </div>
+    </div>
+  </aside>
+
+  <aside id="detail" class="detail" hidden>
+    <button id="detail-close" class="detail-close" data-i18n-title="common.close" aria-label="关闭">×</button>
+    <div id="detail-body" class="detail-body"></div>
+  </aside>
+
+  <div id="toast" class="toast" hidden></div>
+
+  <script src="/vendor/maplibre-gl.js"></script>
+  <script type="module" src="/js/app.js"></script>
+  <script>
+    // 兜底：模块未能加载时给出明确提示，而不是留一个空白页面让人猜
+    setTimeout(function () {
+      if (window.__atlas) return;
+      var d = document.createElement('div');
+      d.style.cssText = 'position:fixed;left:0;right:0;bottom:0;padding:12px 18px;'
+        + 'background:#7a1f1f;color:#fff;font:13px/1.7 sans-serif;z-index:9999';
+      d.textContent = '前端模块未加载：请用 Chrome / Edge 最新版打开（需要 ES Module），'
+        + '或按 Ctrl+F5 强制刷新。若仍失败，请在地址后加 ?debug=1 截图反馈。';
+      document.body.appendChild(d);
+    }, 3000);
+  </script>
+</body>
+</html>

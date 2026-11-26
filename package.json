@@ -1,0 +1,44 @@
+{
+  "name": "history-atlas",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "History Atlas - chronological event knowledge system v1",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "node src/server.js",
+    "start": "node src/cluster.js",
+    "start:single": "node src/server.js",
+    "seed": "node scripts/seed.js",
+    "export": "node scripts/export-static.js",
+    "snapshot": "node scripts/snapshot.js",
+    "collector": "node scripts/fake-collector.js",
+    "test": "node --test",
+    "pg:init": "node scripts/pg-native.js init",
+    "pg:start": "node scripts/pg-native.js start",
+    "pg:stop": "node scripts/pg-native.js stop",
+    "pg:status": "node scripts/pg-native.js status",
+    "db:create": "node scripts/create-db.js",
+    "db:fts": "node scripts/backfill-fts.js",
+    "db:index": "node scripts/add-covering-index.js",
+    "db:spell": "node scripts/apply-spell.js",
+    "replica:init": "node scripts/pg-replica.js init",
+    "replica:start": "node scripts/pg-replica.js start",
+    "replica:setup": "node scripts/pg-replica.js setup",
+    "replica:status": "node scripts/pg-replica.js status",
+    "backup": "node scripts/backup.js",
+    "backup:verify": "node scripts/restore-verify.js",
+    "bench:qps": "node bench/qps-compare.js",
+    "bench:v2": "node bench/v2.js",
+    "bench:paging": "node bench/paging.js",
+    "bench:storage": "node bench/storage.js"
+  },
+  "dependencies": {
+    "@electric-sql/pglite": "^0.5.17",
+    "@embedded-postgres/windows-x64": "^19.0.0-beta.20",
+    "maplibre-gl": "^4.7.1",
+    "pg": "^8.23.1"
+  }
+}

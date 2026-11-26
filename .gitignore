@@ -1,0 +1,31 @@
+# 依赖
+node_modules/
+.npm-cache/
+
+# 数据库数据目录（5 个 PG 实例，约 1.75 GB）
+data/
+
+# 运行时产物
+storage/
+snapshots/
+backups/
+web/generated/
+
+# 第三方库（可用 npm install 重新获取）
+web/vendor/
+
+# 日志与临时文件
+*.log
+*.out
+*.err
+.smoke*
+.tmp/
+
+# 截图（本地验收产物，不随仓库分发）
+shots/
+
+# 系统/编辑器
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
