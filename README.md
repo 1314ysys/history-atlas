@@ -46,13 +46,18 @@
 ## 快速开始
 
 ```bash
-npm install                 # 依赖
+npm install                 # 依赖（postinstall 会自动复制前端库到 web/vendor）
 npm run pg:init             # 初始化原生 PostgreSQL（首次）
 npm run pg:start            # 启动数据库（5433）
 npm run db:create           # 建库 history_atlas
-npm run seed                # 灌入种子数据
+npm run seed                # 灌入 728 条种子事件
 npm start                   # http://127.0.0.1:5173（cluster 4 worker + 缓存）
 ```
+
+> `web/vendor/` 已在仓库内保留一份产物（maplibre 848 KB），克隆即可运行；
+> 升级 maplibre 后用 `npm run vendor` 刷新。
+>
+> 种子数据在 `src/seed/data/`（13 个文件，623 KB，含 728 条事件 / 276 人物 / 196 地点 / 26 朝代）。
 
 单进程模式：`npm run start:single`
 

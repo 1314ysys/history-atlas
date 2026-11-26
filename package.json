@@ -9,6 +9,8 @@
   },
   "scripts": {
     "dev": "node src/server.js",
+    "vendor": "node scripts/vendor.js",
+    "postinstall": "node scripts/vendor.js || exit 0",
     "start": "node src/cluster.js",
     "start:single": "node src/server.js",
     "seed": "node scripts/seed.js",
