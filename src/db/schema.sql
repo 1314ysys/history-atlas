@@ -191,7 +191,10 @@ CREATE TABLE staging_event (
 
 -- ---------- 索引 ----------
 
-CREATE INDEX event_year_idx    ON event (t_start_year);
+-- 注意：不单独建 (t_start_year) 的 btree 索引。
+-- event_timeline_cover_idx 已以 t_start_year 为键并 INCLUDE 了所有输出列，
+-- 实测（bench/optimize-probe.js）planner 在纯年份过滤/排序时也选 cover_idx，
+-- 单独的 event_year_idx 是冗余的（v3.0.6 移除，省约 5% 索引体积）。
 CREATE INDEX event_track_idx   ON event (track, t_start_year);
 CREATE INDEX event_status_idx  ON event (status);
 CREATE INDEX event_fts_idx     ON event USING GIN (search_tsv);

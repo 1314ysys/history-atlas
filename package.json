@@ -1,6 +1,6 @@
 {
   "name": "history-atlas",
-  "version": "3.0.5",
+  "version": "3.0.6",
   "private": true,
   "type": "module",
   "description": "History Atlas - chronological event knowledge system v1",
@@ -25,6 +25,7 @@
     "db:create": "node scripts/create-db.js",
     "db:fts": "node scripts/backfill-fts.js",
     "db:index": "node scripts/add-covering-index.js",
+    "db:drop-idx": "node scripts/drop-redundant-index.js",
     "db:spell": "node scripts/apply-spell.js",
     "replica:init": "node scripts/pg-replica.js init",
     "replica:start": "node scripts/pg-replica.js start",
@@ -35,6 +36,7 @@
     "bench:qps": "node bench/qps-compare.js",
     "bench:v2": "node bench/v2.js",
     "bench:precise": "node bench/precise.js",
+    "bench:opt": "node bench/optimize-probe.js",
     "bench:paging": "node bench/paging.js",
     "bench:storage": "node bench/storage.js"
   },
