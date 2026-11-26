@@ -1,6 +1,6 @@
 {
   "name": "history-atlas",
-  "version": "3.1.0",
+  "version": "3.2.0",
   "private": true,
   "type": "module",
   "description": "History Atlas - chronological event knowledge system v1",
@@ -26,7 +26,6 @@
     "db:fts": "node scripts/backfill-fts.js",
     "db:index": "node scripts/add-covering-index.js",
     "db:drop-idx": "node scripts/drop-redundant-index.js",
-    "copy:import": "node scripts/copy-import.js",
     "db:spell": "node scripts/apply-spell.js",
     "replica:init": "node scripts/pg-replica.js init",
     "replica:start": "node scripts/pg-replica.js start",
@@ -39,7 +38,9 @@
     "bench:precise": "node bench/precise.js",
     "bench:opt": "node bench/optimize-probe.js",
     "bench:paging": "node bench/paging.js",
-    "bench:storage": "node bench/storage.js"
+    "bench:storage": "node bench/storage.js",
+    "copy:import": "node scripts/copy-import.js",
+    "copy:import:parallel": "node scripts/copy-import-parallel.js"
   },
   "dependencies": {
     "@electric-sql/pglite": "^0.5.17",
