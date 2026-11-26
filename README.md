@@ -1,5 +1,10 @@
 # History Atlas · 历史事件编年系统
 
+![version](https://img.shields.io/badge/version-3.0.3-blue)
+![postgres](https://img.shields.io/badge/PostgreSQL-19.0-336791)
+![tests](https://img.shields.io/badge/tests-77%2F77-brightgreen)
+![rating](https://img.shields.io/badge/rating-B%2B%20(69.5)-orange)
+
 把零散史料重排成**可按时间浏览、可对照、可溯源**的结构化事件库。
 
 > 存储与检索能力定级：**B+（69.5 / 100）** — 单机千万级以内 A 级，跨入亿级 C 级

@@ -1,6 +1,6 @@
 {
   "name": "history-atlas",
-  "version": "0.1.0",
+  "version": "3.0.3",
   "private": true,
   "type": "module",
   "description": "History Atlas - chronological event knowledge system v1",
