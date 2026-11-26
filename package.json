@@ -1,6 +1,6 @@
 {
   "name": "history-atlas",
-  "version": "3.0.4",
+  "version": "3.0.5",
   "private": true,
   "type": "module",
   "description": "History Atlas - chronological event knowledge system v1",
@@ -34,6 +34,7 @@
     "backup:verify": "node scripts/restore-verify.js",
     "bench:qps": "node bench/qps-compare.js",
     "bench:v2": "node bench/v2.js",
+    "bench:precise": "node bench/precise.js",
     "bench:paging": "node bench/paging.js",
     "bench:storage": "node bench/storage.js"
   },
