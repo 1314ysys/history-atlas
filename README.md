@@ -1,6 +1,6 @@
 # History Atlas · 历史事件编年系统
 
-![version](https://img.shields.io/badge/version-3.3.0-blue)
+![version](https://img.shields.io/badge/version-3.3.1-blue)
 ![postgres](https://img.shields.io/badge/PostgreSQL-19.0-336791)
 ![tests](https://img.shields.io/badge/tests-77%2F77-brightgreen)
 ![rating](https://img.shields.io/badge/rating-B%2B%20(69.5)-orange)
